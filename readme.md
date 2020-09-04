@@ -3,9 +3,7 @@ CORPORA API
 
 A lil node server for offering up the [Corpora](https://github.com/dariusk/corpora) data as sweet JSON API. (or, if you fork it, any sort of directory structure of JSON files)
 
-Currently running 'live' at https://corpora-api.herokuapp.com/ up to 18 hours a day!
-
-[Browse some JSON](http://coleww.github.io/corpora-api/)
+Currently not running 'live' but hosted at http://corpora-api.glitch.me/ 
 
 
 ### GET "/"
@@ -48,9 +46,11 @@ Returns the index of the API. Includes a `data` object that lists the available 
 
 #### TODO
 
+- get working on glitch.com
 - how to auto-pull in changes to corpora?
 
 #### DEVELOPMUNK
+
 update the corpora
 - cd corpora/ && git pull origin master && cd ..
 
