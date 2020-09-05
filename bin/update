@@ -1,0 +1,13 @@
+#! /bin/bash
+#
+# Copyright (C) 2020 jkirchartz <me@jkirchartz.com>
+#
+# Distributed under terms of the MIT license.
+#
+
+ROOTDIR=$(git rev-parse --show-toplevel)
+
+cd "$ROOTDIR/corpora"
+git pull origin master
+
+
