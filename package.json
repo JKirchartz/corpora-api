@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "simple api serving up the corpora",
   "main": "index.js",
+  "engine": {
+        "node": "12.x"
+  },
   "scripts": {
-    "test": "test.js"
+    "test": "test.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coleww/corpora-api.git"
+    "url": "https://github.com/jkirchartz/corpora-api.git"
   },
   "keywords": [
     "corpora",
@@ -17,9 +21,9 @@
   "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coleww/corpora-api/issues"
+    "url": "https://github.com/jkirchartz/corpora-api/issues"
   },
-  "homepage": "https://github.com/coleww/corpora-api",
+  "homepage": "https://github.com/jkirchartz/corpora-api",
   "devDependencies": {
     "supertest": "^0.15.0"
   }
