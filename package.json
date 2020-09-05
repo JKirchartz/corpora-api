@@ -7,7 +7,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "test": "test.js",
+    "test": "node test.js",
     "update": "./bin/update",
     "start": "node index.js"
   },

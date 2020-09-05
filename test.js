@@ -1,11 +1,11 @@
-var request   = require("supertest");
-var server = require('./server');
+var request = require("supertest");
+var server = require("./server");
 
-app = server();
+var app = server();
 var test = request(app);
 
 test.get("/")
-  .expect('Content-Type', /json/)
+  .expect("Content-Type", /json/)
   .expect(200)
   .end(function(err, res){
     if (err) throw err;
@@ -16,7 +16,7 @@ test.get("/")
   });
 
 test.get("/bork")
-  .expect('Content-Type', /json/)
+  .expect("Content-Type", /json/)
   .expect(404)
   .end(function(err, res){
     if (err) throw err;
@@ -25,7 +25,7 @@ test.get("/bork")
 
 
 test.get("/foods/fruits")
-  .expect('Content-Type', /json/)
+  .expect("Content-Type", /json/)
   .expect(200)
   .end(function(err, res){
     if (err) throw err;
@@ -34,7 +34,7 @@ test.get("/foods/fruits")
   });
 
 test.get("/words/literature/shakespeare_words")
-  .expect('Content-Type', /json/)
+  .expect("Content-Type", /json/)
   .expect(200)
   .end(function(err, res){
     if (err) throw err;
