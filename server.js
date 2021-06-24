@@ -25,7 +25,10 @@ module.exports = function(){
       return;
     }
 
-    if (uri === "") {
+    if (uri === "" ) {
+      res.writeHead(200, {"Content-Type" : "text/html"})
+      fs.createReadStream('index.html').pipe(res)
+    } else if (uri === "index") {
       res.writeHead(200, { "Content-Type": "application/json" });
       res.end(JSON.stringify({description: intro, data: index}, null, 2));
     } else if (existsInIndex(uri, index)) {

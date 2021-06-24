@@ -44,12 +44,7 @@ Returns the index of the API. Includes a `data` object that lists the available 
     Returns `404 Not Found` if "/{folder}/{file}" does not exist in corpora data.
 
 
-#### TODO
-
-- get working on glitch.com
-- how to auto-pull in changes to corpora?
-
-#### DEVELOPMUNK
+#### DEVELOPMENT
 
 update the corpora
 - cd corpora/ && git pull origin master && cd ..
