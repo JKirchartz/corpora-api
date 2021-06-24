@@ -3,35 +3,35 @@
 <head>
   <meta charset="utf-8">
   <title>Corpora API</title>
-  <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
 </head>
 
 <body>
-
-  <h1 id="data">Corpora API</h1>
-  <a href="https://github.com/coleww/corpora-api">code available on gh</a>
-  <p>Available endpoints:</p>
+  <h1>
+    An API for <a href="https://github.com/dariusk/corpora">Darius K's Corpora</a>
+  </h1>
+  <h2 id="data">Corpora API</h2>
+  <p>
+      "for the creation of bots and similar stuff." <a href="https://github.com/jkirchartz/corpora-api">code available on gh</a>  
+  </p>
+  
+  <p>Available endpoints: <a href="//corpora-api.glitch.me/index">index (this list in json format)</a></p>
 
   <ul id="endpoints">
 
   </ul>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
-    $.getJSON("http://corpora-api.herokuapp.com", function(data){
-      $("#data").text(data["description"]);
-      var endpointList = $("#endpoints");
+    fetch("//corpora-api.glitch.me/index").then((res) => res.json()).then(function(data){
+      document.getElementById("data").innerHTML = data["description"];
+      let list = "";
       for(var key in data.data){
         data.data[key].forEach(function(val){
-          var path = key+"/"+val
-          var li = $("<li><a href='http://corpora-api.herokuapp.com/"+path+"'>"+path+"</a></li>")
-          endpointList.append(li)
-        })
+          const path = key+"/"+val
+          list += "<li><a href='//corpora-api.glitch.me/"+path+"'>"+path+"</a></li>"
+        });
       }
-
-    })
+      document.getElementById("endpoints").innerHTML = list;
+    });
   </script>
 
 </body>
