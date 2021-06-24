@@ -3,7 +3,7 @@ CORPORA API
 
 A lil node server for offering up the [Corpora](https://github.com/dariusk/corpora) data as sweet JSON API. (or, if you fork it, any sort of directory structure of JSON files)
 
-Currently not running 'live' but hosted at http://corpora-api.glitch.me/ 
+Currently running live at http://corpora-api.glitch.me/
 
 
 ### GET "/"

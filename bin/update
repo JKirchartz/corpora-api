@@ -1,0 +1,21 @@
+#! /bin/bash
+#
+# Copyright (C) 2020 jkirchartz <me@jkirchartz.com>
+#
+# Distributed under terms of the MIT license.
+#
+
+shopt -s extglob
+
+ROOTDIR=$(git rev-parse --show-toplevel)
+CORPORADIR="./corpora"
+
+rm -rf "$CORPORADIR"
+
+git clone --depth=1 --branch=master https://github.com/dariusk/corpora.git "$CORPORADIR"
+
+cd "$CORPORADIR"
+
+rm -rf !(data|README.md)
+
+

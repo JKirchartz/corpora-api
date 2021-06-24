@@ -27,15 +27,15 @@ module.exports = function(){
 
     if (uri === "") {
       res.writeHead(200, { "Content-Type": "application/json" });
-      res.end(JSON.stringify({description: intro, data: index}));
+      res.end(JSON.stringify({description: intro, data: index}, null, 2));
     } else if (existsInIndex(uri, index)) {
       fs.readFile(DATA_DIR + uri + ".json", function(err, data){
         res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({data: JSON.parse(data)}));
+        res.end(JSON.stringify({data: JSON.parse(data)}), null, 2);
       });
     } else {
       res.writeHead(404, { "Content-Type": "application/json" });
-      res.end(JSON.stringify({error: "404 Not Found"}));
+      res.end(JSON.stringify({error: "404 Not Found"}, null, 2));
     }
   });
 };

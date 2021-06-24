@@ -4,10 +4,11 @@
   "description": "simple api serving up the corpora",
   "main": "index.js",
   "engine": {
-        "node": "12.x"
+    "node": "12.x"
   },
   "scripts": {
-    "test": "test.js",
+    "test": "node test.js",
+    "install": "chmod +x ./bin/update && ./bin/update",
     "start": "node index.js"
   },
   "repository": {
